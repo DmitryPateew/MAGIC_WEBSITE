@@ -7,41 +7,49 @@
     <meta name="author" content="Dmitry Pateew">
     <meta name="description" content="">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Playfair+Display&display=swap"
+          rel="stylesheet">
 </head>
 <body>
-<h1>Сайт таро</h1>
-<header>
-    <div class="header_logo">Лого</div>
-    <a href="tel:+375291234567" title="Позвонить">+375-29-123-45-67</a>
-    <nav>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Приемущества</a></li>
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>Социальные сети</h2>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-</header>
+<h1 class="visually-hidden">Сайт таро</h1>
+<div class="container">
+    <header>
+        <div class="header_logo">Лого</div>
+        <a href="tel:+375291234567" title="Позвонить">+375-29-123-45-67</a>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Обо&nbsp;мне</a></li>
+                <li><a href="#">Приемущества</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <section class="header__social">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <div class="header__icon--telegram"></div>
+            <div class="header__icon--skype"></div>
+            <div class="header__icon--viber"></div>
+        </section>
+    </header>
+</div>
 <main>
-    <section>
+    <section class="answer-on-question">
         <h2>Ответы на все случаи жизни</h2>
         <p>Профессиональное гадание на картах Таро</p>
         <button>Записаться</button>
     </section>
     <section>
-        <h2>Варианты услуг</h2>
-        <article>
-            <div></div>
+        <h2 class="visually-hidden">Варианты услуг</h2>
+        <article class="serviceType">
+            <div class="serviceType__hexagon">
+                <div class="serviceType__svg-icon--relationship"></div>
+            </div>
             <h3>Отношения</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+            <div class="horizontal-line"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
             <button>Подробнее</button>
         </article>
     </section>
@@ -59,18 +67,21 @@
             Таро можно узнать всё, они могут подсказать, дать свободу выбора, показать
             ситуацию на данный момент и её последующее развитие.</p>
     </section>
-    <section>
+    <section class="advantages">
         <h2>Почему именно я?</h2>
-        <article>
-            <div></div>
+        <article class="advantage-card">
+            <div class="advantage-card__icon"></div>
             <h3>Потомственная ведунья</h3>
             <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
         </article>
     </section>
-    <section>
+    <section class="price">
         <h2>Цены</h2>
-        <article>
-            <h3>Минимум</h3>
+        <article class="price-card">
+            <div>
+                <h3>Минимум</h3>
+                <div class="horizontal-line horizontal-line--white"></div>
+            </div>
             <p>1200 руб/час</p>
             <ul>
                 <li>Lorem ipsum dolor sit</li>
@@ -78,8 +89,8 @@
                 <li>Tempor incididunt</li>
                 <li>Consectetur adipiscing</li>
             </ul>
+            <button>Заказать</button>
         </article>
-        <button>Заказать</button>
     </section>
     <section>
         <h2>Запишитесь на консультацию</h2>
@@ -92,11 +103,11 @@
     </section>
     <section>
         <h2>Свечи ручной работы</h2>
-        <article>
+        <article class="product-card">
             <h3>Свеча ручной работы Миндаль</h3>
             <picture>
                 <source srcset="">
-                <img src="#" alt="">
+                <img src="img/content/candles/candle1.png" alt="">
             </picture>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
             <button>Заказать</button>

@@ -1,7 +1,379 @@
 html {
-    color: #979797
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    color: #979797;
 }
 
-.header_logo {
+a {
+    text-decoration: none;
+    color: #979797;
+}
+
+a:hover {
+    color: #333;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.header__logo {
+    font-size: 1.4rem;
     color: #FFF
+}
+
+.header__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__social div {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 4px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header__icon--telegram {
+    background-image: url("../img/icons/socialIcons/telegramIcon.svg");
+}
+
+.header__icon--telegram:hover {
+    background-image: url("../img/icons/socialIcons/hoverIcon/telegramIcon.svg");
+}
+
+.header__icon--skype {
+    background-image: url("../img/icons/socialIcons/skypeIcon.svg");
+}
+
+.header__icon--skype:hover {
+    background-image: url("../img/icons/socialIcons/hoverIcon/skypeIcon.svg");
+}
+
+.header__icon--viber {
+    background-image: url("../img/icons/socialIcons/viberIcon.svg");
+}
+
+.header__icon--viber:hover {
+    background-image: url("../img/icons/socialIcons/hoverIcon/viberIcon.svg");
+}
+
+nav {
+    width: 47%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.answer-on-question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 501px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.answer-on-question h2 {
+    font-size: 4rem;
+}
+
+.answer-on-question p {
+    font-size: 2rem;
+}
+
+.answer-on-question button {
+    padding: 13px 70px 14px 31px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #333333;
+    background-color: #FFF;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 140px;
+}
+
+.serviceType {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
+    border-radius: 2px;
+}
+
+.serviceType:hover {
+    width: 290px;
+    padding: 70px 0;
+}
+
+.serviceType:hover .serviceType__hexagon {
+    margin-left: 0;
+    background-image: url("../img/icons/hexagonHover.svg");
+    background-size: 100% auto;
+}
+
+.serviceType:hover .serviceType__hexagon div {
+    margin-top: 0;
+    margin-left: 42px;
+}
+
+.serviceType h3 {
+    margin: 0;
+    padding-bottom: 14px;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #333333;
+}
+
+.serviceType p {
+    width: 200px;
+    font-size: 1.4rem;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.serviceType button {
+    padding: 11px 38px;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.8rem;
+    color: #979797;
+    border: 1px solid #979797;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.serviceType button:hover {
+    color: #fff;
+    background-color: #B0CFC5;
+    border: 1px solid #B0CFC5;
+}
+
+.horizontal-line {
+    width: 80px;
+    margin-bottom: 15px;
+    border: 1px solid #979797;
+}
+
+.serviceType__hexagon {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-image: url("../img/icons/hexagon.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.serviceType__hexagon div {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 35px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.serviceType__svg-icon--relationship {
+    background-image: url("../img/icons/serviceTypeIcons/relationships.svg");
+}
+
+.advantages {
+    margin-left: 150px;
+}
+
+.advantages h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.advantage-card {
+    max-width: 390px;
+    padding: 45px 0 45px 80px;
+    color: #fff;
+    background-color: #313234;
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
+    border-radius: 2px;;
+}
+
+.advantage-card div {
+    position: absolute;
+    margin-left: -130px;
+    margin-top: -13px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #B0CFC5;
+    background-repeat: no-repeat;
+    background-size: 45px auto;
+    background-position: center;
+    box-shadow: 0 4px 26px rgba(0, 0, 0, 0.18);
+}
+
+.advantage-card h3 {
+    max-width: 330px;
+    margin: 0 0 10px 0;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.advantage-card p {
+    max-width: 265px;
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+.advantage-card__icon {
+    background-image: url("../img/icons/advantagesIcons/magic-ball.svg");
+}
+
+.price-card {
+    max-width: 270px;
+    padding-bottom: 43px;
+    background-color: #313234;
+    border-radius: 2px;
+    box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
+}
+
+.price-card h3 {
+    margin: 0;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.price-card p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 0;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.price-card ul {
+    margin-top: 0;
+    margin-left: 45px;
+    font-size: 1.4rem;
+    list-style-image: url('../img/icons/accepIcon.svg');
+}
+
+.price-card li {
+    padding-left: 5px;
+    padding-bottom: 15px;
+}
+
+.price-card button {
+    margin-top: 25px;
+    margin-left: 55px;
+    padding: 11px 47px;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #313234;
+    border: 1px solid #979797;
+    border-radius: 2px;
+}
+
+.price-card button:hover {
+    padding: 15px 51px;
+    background-color: #B0CFC5;
+    border: 1px solid #B0CFC5;
+}
+
+.horizontal-line--white {
+    margin: 10px auto;
+    border: 1px solid #fff;
+}
+
+.price-card > div {
+    padding: 50px 0 30px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/priceHeder.svg");
+    background-size: 100% auto;
+}
+
+.product-card {
+    max-width: 270px;
+    padding-top: 60px;
+    box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
+    border-radius: 2px;
+}
+
+.product-card h3 {
+    margin: 0 auto;
+    max-width: 243px;
+    padding-bottom: 6px;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 2rem;
+    color: #333333;
+    text-align: center;
+}
+
+.product-card p {
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.product-card button {
+    margin-left: 55px;
+    padding: 11px 47px;
+    font-size: 1.4rem;
+    color: #979797;
+    border: 1px solid #979797;
+    border-radius: 2px;
+    background: none;
+}
+
+.product-card picture{
+    margin-left: 50px;
 }
