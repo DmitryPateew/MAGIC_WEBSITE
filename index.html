@@ -54,21 +54,27 @@
         </article>
     </section>
     <section>
-        <h2>Обо мне</h2>
-        <picture>
-            <source srcset="">
-            <img src="#" alt="">
-        </picture>
-        <p>Этот сайт посвящён картам Таро.Вам нужна профессиональная помощь
-            таролога?Я с удовольствием отвечу на ваши вопросы.Если вы сами интересуетесь системой
-            Таро,то надеюсь вы найдёте здесь единомышленников и полезную для себя информацию.
-            Карты Таро на данный момент один из самых распространённых и наиболее точных способов гадания.
-            Им пользуются и профессионалы и любители. При гадании на картах
-            Таро можно узнать всё, они могут подсказать, дать свободу выбора, показать
-            ситуацию на данный момент и её последующее развитие.</p>
+        <h2 class="titleLine">Обо мне</h2>
+        <article class="aboutMe">
+            <picture>
+                <source srcset="">
+                <img src="./img/content/aboutMe/cardsDesctop.png" alt="">
+            </picture>
+            <p>Этот сайт посвящён картам Таро.Вам нужна профессиональная помощь
+                таролога?Я с удовольствием отвечу на ваши вопросы.Если вы сами интересуетесь системой
+                Таро,то надеюсь вы найдёте здесь единомышленников и полезную для себя информацию.
+                Карты Таро на данный момент один из самых распространённых и наиболее точных способов гадания.
+                Им пользуются и профессионалы и любители. При гадании на картах
+                Таро можно узнать всё, они могут подсказать, дать свободу выбора, показать
+                ситуацию на данный момент и её последующее развитие.</p>
+        </article>
     </section>
     <section class="advantages">
-        <h2>Почему именно я?</h2>
+        <div class="titleWrapper">
+            <div class="titleLineDouble"></div>
+            <h2>Почему именно я?</h2>
+            <div class="titleLineDouble"></div>
+        </div>
         <article class="advantage-card">
             <div class="advantage-card__icon"></div>
             <h3>Потомственная ведунья</h3>
@@ -76,7 +82,11 @@
         </article>
     </section>
     <section class="price">
-        <h2>Цены</h2>
+        <div class="titleWrapper">
+            <div class="titleLineDouble"></div>
+            <h2>Цены</h2>
+            <div class="titleLineDouble"></div>
+        </div>
         <article class="price-card">
             <div>
                 <h3>Минимум</h3>
@@ -92,17 +102,20 @@
             <button>Заказать</button>
         </article>
     </section>
-    <section>
-        <h2>Запишитесь на консультацию</h2>
+    <section class="formSection">
+        <h2 class="titleLine">Запишитесь на консультацию</h2>
         <p>И я перезвоню вам для уточнения деталей</p>
-        <form>
-            <input>
-            <input>
+        <form method="post">
+            <label id="nameLabel" for="name">Имя</label>
+            <input id="name" name="name" placeholder="Имя" min="2" max="30" autocomplete required>
+            <label id="telLabel" for="tel">Номер телефона</label>
+            <input id="tel" name="tel" placeholder="Номер телефона" type="tel" autocomplete required>
             <button type="submit">Отправить</button>
+            <div class="horoscope"></div>
         </form>
     </section>
     <section>
-        <h2>Свечи ручной работы</h2>
+        <h2 class="titleLine">Свечи ручной работы</h2>
         <article class="product-card">
             <h3>Свеча ручной работы Миндаль</h3>
             <picture>

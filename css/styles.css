@@ -13,6 +13,40 @@ a:hover {
     color: #333;
 }
 
+button {
+    cursor: pointer;
+}
+
+h2 {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 3.2rem;
+}
+
+.titleLine::after {
+    content: '';
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-left: 50px;
+    width: 200px;
+    border-bottom: 1px solid #333333;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleWrapper h2 {
+    padding: 0 50px;
+}
+
+
+.titleLineDouble {
+    width: 200px;
+    border-bottom: 1px solid #333333;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -339,9 +373,93 @@ nav li {
     background-size: 100% auto;
 }
 
+.formSection p {
+    font-size: 1.4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    padding: 115px 155px 108px 115px;
+    background-color: #313234;
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
+    border-radius: 2px;
+}
+
+form button {
+    padding: 16px 162px 16px 123px;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    border: 1px solid #979797;
+    background-color: #313234;
+    border-radius: 2px;
+    background-image: url("../img/icons/arrowWhite.svg");
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    background-position: 223px center;
+}
+
+form button:hover {
+    background-image: url("../img/icons/arrowWhiteHover.svg");
+    background-position: 213px center;
+    background-color: #B0CFC5;
+}
+
+form input {
+    margin-bottom: 31px;
+    padding-bottom: 3px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: #313234;
+    color: #fff;
+}
+
+form label {
+    padding-bottom: 6px;
+    font-size: 1.2rem;
+}
+
+form input::placeholder {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.6rem;
+}
+
+form input:focus::placeholder {
+    visibility: hidden;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 2px solid #B0CFC5;
+}
+
+.horoscope {
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 400px;
+    width: 615px;
+    height: 615px;
+    border-radius: 100%;
+    background-image: url("../img/content/horoscope.png");
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
+    animation: spin 140s linear 0s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .product-card {
     max-width: 270px;
-    padding-top: 60px;
+    padding: 60px 0;
     box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
     border-radius: 2px;
 }
@@ -374,6 +492,27 @@ nav li {
     background: none;
 }
 
-.product-card picture{
+.product-card picture {
     margin-left: 50px;
+}
+
+.aboutMe picture {
+    position: absolute;
+    z-index: -1;
+}
+
+.aboutMe img {
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
+}
+
+.aboutMe p {
+    max-width: 700px;
+    margin: 0;
+    padding: 65px 47px;
+    font-size: 1.8rem;
+    letter-spacing: 0.02rem;
+    color: #fff;
+    background-color: #313234;
+    box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
+    border-radius: 2px;
 }
