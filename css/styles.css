@@ -19,32 +19,81 @@ button {
 
 h2 {
     font-family: 'Arsenal', sans-serif;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 1360px) {
+    h2 {
+        text-align: left;
+    }
 }
 
 .titleLine::after {
     content: '';
     display: inline-block;
+    width: 100%;
     margin-bottom: 7px;
-    margin-left: 50px;
-    width: 200px;
     border-bottom: 1px solid #333333;
+}
+
+@media (min-width: 1360px) {
+    .titleLine::after {
+        width: 200px;
+        margin-left: 50px;
+    }
+}
+
+.titleLine--white::after {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
 }
 
 .titleWrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 35px 0;
+}
+
+@media (min-width: 768px) {
+    .titleWrapper {
+        flex-direction: row;
+    }
 }
 
 .titleWrapper h2 {
-    padding: 0 50px;
+    margin: 15px 0;
 }
 
+@media (min-width: 768px) {
+    .titleWrapper h2 {
+        padding: 0 50px;
+    }
+}
 
 .titleLineDouble {
-    width: 200px;
+    width: 100%;
     border-bottom: 1px solid #333333;
+}
+
+@media (min-width: 768px) {
+    .titleLineDouble {
+        width: 200px;
+    }
+}
+
+.itemList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .visually-hidden {
@@ -59,8 +108,21 @@ h2 {
 }
 
 .container {
-    max-width: 1170px;
     margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .container {
+        max-width: 1170px;
+        padding: 0;
+    }
 }
 
 header {
@@ -250,7 +312,21 @@ nav li {
 }
 
 .advantages {
-    margin-left: 150px;
+    margin-left: 50px;
+}
+
+.advantageList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+}
+
+@media (min-width: 1360px) {
+    .advantageList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .advantages h2 {
@@ -261,18 +337,30 @@ nav li {
 }
 
 .advantage-card {
-    max-width: 390px;
-    padding: 45px 0 45px 80px;
+    padding: 35px 0 35px 80px;
     color: #fff;
     background-color: #313234;
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
     border-radius: 2px;;
 }
 
+
+@media (min-width: 768px) {
+    .advantage-card {
+        padding: 45px 0 45px 80px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .advantage-card {
+        max-width: 390px;
+        padding: 45px 126px 45px 80px;
+    }
+}
+
 .advantage-card div {
     position: absolute;
     margin-left: -130px;
-    margin-top: -13px;
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -281,6 +369,12 @@ nav li {
     background-size: 45px auto;
     background-position: center;
     box-shadow: 0 4px 26px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 420px) {
+    .advantage-card div {
+        margin-top: -13px;
+    }
 }
 
 .advantage-card h3 {
@@ -299,8 +393,41 @@ nav li {
     font-weight: normal;
 }
 
-.advantage-card__icon {
+.advantage-card__iconBall {
     background-image: url("../img/icons/advantagesIcons/magic-ball.svg");
+}
+
+.advantage-card__iconSertificat {
+    background-image: url("../img/icons/advantagesIcons/sertificat.svg");
+}
+
+.advantage-card__iconDiolog {
+    background-image: url("../img/icons/advantagesIcons/diolog.svg");
+}
+
+.advantage-card__iconConfedentiol {
+    background-image: url("../img/icons/advantagesIcons/confedentiol.svg");
+}
+
+.price {
+    padding: 85px 0 120px;
+}
+
+.price-card__List {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 880px;
+    row-gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .price-card__List {
+        justify-content: space-between;
+        row-gap: 0;
+        flex-direction: row;
+    }
 }
 
 .price-card {
@@ -334,8 +461,27 @@ nav li {
 .price-card ul {
     margin-top: 0;
     margin-left: 45px;
+    margin-right: 45px;
     font-size: 1.4rem;
     list-style-image: url('../img/icons/accepIcon.svg');
+}
+
+@media (min-width: 768px) {
+    .price-card ul {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .price-card ul {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+}
+
+.price-card--center {
+    z-index: 1;
 }
 
 .price-card li {
@@ -367,28 +513,74 @@ nav li {
 }
 
 .price-card > div {
-    padding: 50px 0 30px;
+    padding: 50px 0 50px;
     background-repeat: no-repeat;
     background-image: url("../img/icons/priceHeder.svg");
     background-size: 100% auto;
 }
 
+.formSection {
+    padding-top: 40px;
+    padding-bottom: 270px;
+    background-color: #313234;
+    background-image: url("../img/content/formBackgraund.svg");
+    background-repeat: no-repeat;
+    background-size: 50px auto;
+    background-position: left bottom;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+    .formSection {
+        background-size: 225px auto;
+    }
+}
+
+@media (min-width: 1360px) {
+    .formSection {
+        padding-top: 80px;
+        padding-bottom: 184px;
+        background-size: 400px auto;
+        margin-bottom: 0;
+    }
+}
+
 .formSection p {
     font-size: 1.4rem;
+    text-align: center;
+}
+
+@media (min-width: 1360px) {
+    .formSection p {
+        text-align: left;
+    }
 }
 
 form {
+    position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 370px;
-    padding: 115px 155px 108px 115px;
+    padding: 113px 20px;
     background-color: #313234;
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
     border-radius: 2px;
 }
 
+@media (min-width: 768px) {
+    form {
+        padding: 113px 174px;
+    }
+}
+
+@media (min-width: 1360px) {
+    form {
+        max-width: 370px;
+        padding: 115px 155px 108px 115px;
+    }
+}
+
 form button {
-    padding: 16px 162px 16px 123px;
+    padding: 11px 122px 11px 83px;
     font-family: 'Arsenal', sans-serif;
     font-size: 1.8rem;
     color: #fff;
@@ -398,7 +590,18 @@ form button {
     background-image: url("../img/icons/arrowWhite.svg");
     background-repeat: no-repeat;
     background-size: auto 20px;
-    background-position: 223px center;
+    background-position: 70% center;
+}
+
+@media (min-width: 768px) {
+    form button {
+    }
+}
+
+@media (min-width: 1360px) {
+    form button {
+        padding: 16px 162px 16px 123px;
+    }
 }
 
 form button:hover {
@@ -437,15 +640,36 @@ form input:focus {
 
 .horoscope {
     position: absolute;
-    margin-top: -200px;
-    margin-left: 400px;
-    width: 615px;
-    height: 615px;
+    left: 0;
+    right: 0;
+    margin-top: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+    height: 330px;
     border-radius: 100%;
     background-image: url("../img/content/horoscope.png");
     background-repeat: no-repeat;
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
     animation: spin 140s linear 0s infinite;
+    background-size: 100%;
+}
+
+@media (min-width: 768px) {
+    .horoscope {
+        width: 615px;
+        height: 615px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .horoscope {
+        left: auto;
+        right: auto;
+        margin-top: -200px;
+        margin-left: 400px;
+        background-size: 100%;
+    }
 }
 
 @keyframes spin {
@@ -458,8 +682,7 @@ form input:focus {
 }
 
 .product-card {
-    max-width: 270px;
-    padding: 60px 0;
+    padding: 60px 15px;
     box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
     border-radius: 2px;
 }
@@ -496,17 +719,62 @@ form input:focus {
     margin-left: 50px;
 }
 
-.aboutMe picture {
-    position: absolute;
-    z-index: -1;
+.aboutMeSection {
+    padding: 80px 0;
+    background-color: #313234;
 }
 
-.aboutMe img {
+@media (min-width: 1360px) {
+    .aboutMeSection {
+        margin-bottom: 180px;
+    }
+}
+
+.aboutMeSection h2 {
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .aboutMe {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+}
+
+.aboutMe picture {
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
 }
 
+@media (min-width: 768px) {
+    .aboutMe picture {
+    }
+}
+
+@media (min-width: 1360px) {
+    .aboutMe picture {
+        position: absolute;
+
+    }
+}
+
+.aboutMe img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .aboutMe img {
+        width: auto;
+    }
+}
+
 .aboutMe p {
-    max-width: 700px;
     margin: 0;
     padding: 65px 47px;
     font-size: 1.8rem;
@@ -515,4 +783,19 @@ form input:focus {
     background-color: #313234;
     box-shadow: 0 4px 66px rgba(0, 0, 0, 0.28);
     border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+    .aboutMe p {
+
+    }
+}
+
+@media (min-width: 1360px) {
+    .aboutMe p {
+        max-width: 700px;
+        margin-top: 40px;
+        margin-left: auto;
+        z-index: 2;
+    }
 }

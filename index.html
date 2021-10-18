@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Magic Website</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="author" content="Dmitry Pateew">
     <meta name="description" content="">
@@ -53,78 +55,166 @@
             <button>Подробнее</button>
         </article>
     </section>
-    <section>
-        <h2 class="titleLine">Обо мне</h2>
-        <article class="aboutMe">
-            <picture>
-                <source srcset="">
-                <img src="./img/content/aboutMe/cardsDesctop.png" alt="">
-            </picture>
-            <p>Этот сайт посвящён картам Таро.Вам нужна профессиональная помощь
-                таролога?Я с удовольствием отвечу на ваши вопросы.Если вы сами интересуетесь системой
-                Таро,то надеюсь вы найдёте здесь единомышленников и полезную для себя информацию.
-                Карты Таро на данный момент один из самых распространённых и наиболее точных способов гадания.
-                Им пользуются и профессионалы и любители. При гадании на картах
-                Таро можно узнать всё, они могут подсказать, дать свободу выбора, показать
-                ситуацию на данный момент и её последующее развитие.</p>
-        </article>
+    <section class="aboutMeSection">
+        <div class="container">
+            <h2 class="titleLine">Обо мне</h2>
+            <article class="aboutMe">
+                <picture>
+                    <source media="(min-width: 1360px)" srcset="./img/content/aboutMe/cardsDesctop.png">
+                    <source media="(min-width: 768px)" srcset="./img/content/aboutMe/cardsTablet.png">
+                    <source media="(min-width: 500px)" srcset="./img/content/aboutMe/cardsDesctop.png">
+                    <img src="./img/content/aboutMe/cardsMobile.png" alt="">
+                </picture>
+                <p>Этот сайт посвящён картам Таро.Вам нужна профессиональная помощь
+                    таролога?Я с удовольствием отвечу на ваши вопросы.Если вы сами интересуетесь системой
+                    Таро,то надеюсь вы найдёте здесь единомышленников и полезную для себя информацию.
+                    Карты Таро на данный момент один из самых распространённых и наиболее точных способов гадания.
+                    Им пользуются и профессионалы и любители. При гадании на картах
+                    Таро можно узнать всё, они могут подсказать, дать свободу выбора, показать
+                    ситуацию на данный момент и её последующее развитие.</p>
+            </article>
+        </div>
     </section>
     <section class="advantages">
-        <div class="titleWrapper">
-            <div class="titleLineDouble"></div>
-            <h2>Почему именно я?</h2>
-            <div class="titleLineDouble"></div>
+        <div class="container">
+            <div class="titleWrapper">
+                <div class="titleLineDouble"></div>
+                <h2>Почему&nbsp;именно&nbsp;я?</h2>
+                <div class="titleLineDouble"></div>
+            </div>
+            <div class="advantageList">
+                <article class="advantage-card">
+                    <div class="advantage-card__iconBall"></div>
+                    <h3>Потомственная ведунья</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
+                </article>
+                <article class="advantage-card">
+                    <div class="advantage-card__iconSertificat"></div>
+                    <h3>Сертифицированный таролог</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
+                </article>
+                <article class="advantage-card">
+                    <div class="advantage-card__iconDiolog"></div>
+                    <h3>Онлайн консультация</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
+                </article>
+                <article class="advantage-card">
+                    <div class="advantage-card__iconConfedentiol"></div>
+                    <h3>Конфиденциальность</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
+                </article>
+            </div>
         </div>
-        <article class="advantage-card">
-            <div class="advantage-card__icon"></div>
-            <h3>Потомственная ведунья</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt </p>
-        </article>
     </section>
     <section class="price">
-        <div class="titleWrapper">
-            <div class="titleLineDouble"></div>
-            <h2>Цены</h2>
-            <div class="titleLineDouble"></div>
-        </div>
-        <article class="price-card">
-            <div>
-                <h3>Минимум</h3>
-                <div class="horizontal-line horizontal-line--white"></div>
+        <div class="container">
+            <div class="titleWrapper">
+                <div class="titleLineDouble"></div>
+                <h2>Цены</h2>
+                <div class="titleLineDouble"></div>
             </div>
-            <p>1200 руб/час</p>
-            <ul>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Elit, sed do eiusmod</li>
-                <li>Tempor incididunt</li>
-                <li>Consectetur adipiscing</li>
-            </ul>
-            <button>Заказать</button>
-        </article>
+            <div class="price-card__List">
+                <article class="price-card">
+                    <div>
+                        <h3>Минимум</h3>
+                        <div class="horizontal-line horizontal-line--white"></div>
+                    </div>
+                    <p>1200 руб/час</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Elit, sed do eiusmod</li>
+                        <li>Tempor incididunt</li>
+                        <li>Consectetur adipiscing</li>
+                    </ul>
+                    <button>Заказать</button>
+                </article>
+                <article class="price-card price-card--center">
+                    <div>
+                        <h3>Стандарт</h3>
+                        <div class="horizontal-line horizontal-line--white"></div>
+                    </div>
+                    <p>1800 руб/час</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Elit, sed do eiusmod</li>
+                        <li>Tempor incididunt</li>
+                        <li>Consectetur adipiscing</li>
+                    </ul>
+                    <button>Заказать</button>
+                </article>
+                <article class="price-card">
+                    <div>
+                        <h3>Премиум</h3>
+                        <div class="horizontal-line horizontal-line--white"></div>
+                    </div>
+                    <p>2500 руб/час</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit</li>
+                        <li>Elit, sed do eiusmod</li>
+                        <li>Tempor incididunt</li>
+                        <li>Consectetur adipiscing</li>
+                    </ul>
+                    <button>Заказать</button>
+                </article>
+            </div>
+        </div>
     </section>
     <section class="formSection">
-        <h2 class="titleLine">Запишитесь на консультацию</h2>
-        <p>И я перезвоню вам для уточнения деталей</p>
-        <form method="post">
-            <label id="nameLabel" for="name">Имя</label>
-            <input id="name" name="name" placeholder="Имя" min="2" max="30" autocomplete required>
-            <label id="telLabel" for="tel">Номер телефона</label>
-            <input id="tel" name="tel" placeholder="Номер телефона" type="tel" autocomplete required>
-            <button type="submit">Отправить</button>
-            <div class="horoscope"></div>
-        </form>
+        <div class="container">
+            <h2 class="titleLine titleLine--white">Запишитесь на&nbsp;консультацию</h2>
+            <p>И я перезвоню вам для уточнения деталей</p>
+            <form method="post">
+                <label id="nameLabel" for="name">Имя</label>
+                <input id="name" name="name" placeholder="Имя" min="2" max="30" autocomplete required>
+                <label id="telLabel" for="tel">Номер телефона</label>
+                <input id="tel" name="tel" placeholder="Номер телефона" type="tel" autocomplete required>
+                <button type="submit">Отправить</button>
+                <div class="horoscope"></div>
+            </form>
+        </div>
     </section>
     <section>
-        <h2 class="titleLine">Свечи ручной работы</h2>
-        <article class="product-card">
-            <h3>Свеча ручной работы Миндаль</h3>
-            <picture>
-                <source srcset="">
-                <img src="img/content/candles/candle1.png" alt="">
-            </picture>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <button>Заказать</button>
-        </article>
+        <div class="container">
+            <h2 class="titleLine">Свечи ручной работы</h2>
+            <div class="itemList">
+                <article class="product-card">
+                    <h3>Свеча ручной работы Миндаль</h3>
+                    <picture>
+                        <source srcset="">
+                        <img src="img/content/candles/candle1.png" alt="">
+                    </picture>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Заказать</button>
+                </article>
+                <article class="product-card">
+                    <h3>Свеча ручной работы Миндаль</h3>
+                    <picture>
+                        <source srcset="">
+                        <img src="img/content/candles/candle1.png" alt="">
+                    </picture>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Заказать</button>
+                </article>
+                <article class="product-card">
+                    <h3>Свеча ручной работы Миндаль</h3>
+                    <picture>
+                        <source srcset="">
+                        <img src="img/content/candles/candle1.png" alt="">
+                    </picture>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Заказать</button>
+                </article>
+                <article class="product-card">
+                    <h3>Свеча ручной работы Миндаль</h3>
+                    <picture>
+                        <source srcset="">
+                        <img src="img/content/candles/candle1.png" alt="">
+                    </picture>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <button>Заказать</button>
+                </article>
+            </div>
+        </div>
     </section>
 </main>
 <footer>
