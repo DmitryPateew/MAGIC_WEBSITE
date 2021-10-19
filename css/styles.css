@@ -2,6 +2,7 @@ html {
     font-family: 'Playfair Display', serif;
     font-size: 10px;
     color: #979797;
+    cursor:  url('../img/icons/arrow.svg') 2 4, default;
 }
 
 a {
@@ -32,6 +33,24 @@ h2 {
 @media (min-width: 1360px) {
     h2 {
         text-align: left;
+    }
+}
+
+.leftTriangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 166%;
+    background-image: url("../img/content/greenTriangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 0;
+}
+
+@media (min-width: 1360px) {
+    .leftTriangle {
+        width: 357px;
     }
 }
 
@@ -94,6 +113,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .visually-hidden {
@@ -125,7 +145,51 @@ h2 {
     }
 }
 
+.mobileMenu__wrapper {
+    cursor: pointer;
+}
+
+@media (min-width: 1360px) {
+    .mobileMenu__wrapper {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    position: relative;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 2px;
+    background-color: #979797;
+}
+
+.mobileMenu::before {
+    content: '';
+    top: 20px;
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #979797;
+}
+
+.mobileMenu::after {
+    content: '';
+    top: 10px;
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #979797;
+}
+
 header {
+    padding-top: 34px;
+    font-family: 'Arsenal', sans-serif;
+    background-color: #EEEEEE;
+}
+
+.headerWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,14 +198,22 @@ header {
 }
 
 .header__logo {
-    font-size: 1.4rem;
-    color: #FFF
+    font-size: 2rem;
+    color: #FFF;
+    z-index: 1;
 }
 
 .header__social {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    column-gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .header__social {
+        display: flex;
+    }
 }
 
 .header__social div {
@@ -150,6 +222,7 @@ header {
     padding-bottom: 4px;
     background-repeat: no-repeat;
     background-size: 100%;
+    cursor: pointer;
 }
 
 .header__icon--telegram {
@@ -177,7 +250,14 @@ header {
 }
 
 nav {
-    width: 47%;
+    display: none;
+}
+
+@media (min-width: 1360px) {
+    nav {
+        display: block;
+        width: 47%;
+    }
 }
 
 nav ul {
@@ -185,19 +265,42 @@ nav ul {
     justify-content: space-between;
     padding: 0;
     margin: 0;
-
 }
 
 nav li {
     list-style-type: none;
 }
 
+.answer-on-question__section {
+    background-color: #EEEEEE;
+    background-image: url("../img/content/BigCard.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 1000px auto;
+    padding: 200px 0 200px;
+}
+
+@media (min-width: 768px) {
+    .answer-on-question__section {
+        padding: 220px 0 200px;
+        background-size: 1300px auto;
+    }
+}
+
+@media (min-width: 1360px) {
+    .answer-on-question__section {
+        padding: 200px 0 200px;
+        background-position: center;
+        background-size: 1550px auto;
+    }
+}
+
 .answer-on-question {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 501px;
     font-family: 'Arsenal', sans-serif;
+    color: #fff;
 }
 
 .answer-on-question h2 {
@@ -221,20 +324,44 @@ nav li {
     background-position: 140px;
 }
 
+.serviceType__section {
+    background-color: #313234;
+}
+
+.itemList--service {
+    position: relative;
+    bottom: 60px;
+    align-items: center;
+}
+
 .serviceType {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 270px;
-    padding: 60px 0;
+    padding: 60px 65px;
     background-color: #fff;
     box-shadow: 0 9px 39px rgba(45, 38, 38, 0.21);
     border-radius: 2px;
 }
 
-.serviceType:hover {
-    width: 290px;
-    padding: 70px 0;
+@media (min-width: 768px) {
+    .serviceType {
+        padding: 60px 70px;
+    }
+
+    .serviceType:hover {
+        padding: 70px 70px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .serviceType {
+        padding: 60px 36px;
+    }
+
+    .serviceType:hover {
+        padding: 70px 45px;
+    }
 }
 
 .serviceType:hover .serviceType__hexagon {
@@ -309,6 +436,18 @@ nav li {
 
 .serviceType__svg-icon--relationship {
     background-image: url("../img/icons/serviceTypeIcons/relationships.svg");
+}
+
+.serviceType__svg-icon--job {
+    background-image: url("../img/icons/serviceTypeIcons/job.svg");
+}
+
+.serviceType__svg-icon--health {
+    background-image: url("../img/icons/serviceTypeIcons/health.svg");
+}
+
+.serviceType__svg-icon--decisionMaking {
+    background-image: url("../img/icons/serviceTypeIcons/decisionMaking.svg");
 }
 
 .advantages {
