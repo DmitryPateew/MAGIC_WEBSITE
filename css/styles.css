@@ -2,7 +2,7 @@ html {
     font-family: 'Playfair Display', serif;
     font-size: 10px;
     color: #979797;
-    cursor:  url('../img/icons/arrow.svg') 2 4, default;
+    cursor:  url('../img/icons/cursor.svg') 2 4, auto;
 }
 
 a {
